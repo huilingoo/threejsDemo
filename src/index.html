@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-
 </head>
 
-<!-- <audio src="音频地址" id="audios" autoplay preload loop="loop"></audio>   -->
 <script>
-function audioAutoPlay(id){  
-    var audio = document.getElementById(id),
-        play = function(){  
-            audio.play();  
-            document.removeEventListener("touchstart",play, false);  
-        };  
-    audio.play();  
-    document.addEventListener("WeixinJSBridgeReady", function () {  
-        play();  
-    }, false);  
-    document.addEventListener('YixinJSBridgeReady', function() {  
-        play();  
-    }, false);  
-    document.addEventListener("touchstart",play, false);  
-}  
-audioAutoPlay('audios');
+    function audioAutoPlay(id) {
+        var audio = document.getElementById(id),
+            play = function () {
+                audio.play();
+                document.removeEventListener("touchstart", play, false);
+            };
+        audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            play();
+        }, false);
+        document.addEventListener('YixinJSBridgeReady', function () {
+            play();
+        }, false);
+        document.addEventListener("touchstart", play, false);
+    }
+    audioAutoPlay('audios');
 </script>
 
 <body>
     <canvas id="bg"></canvas>
     <script src="./main/crystalBall/bg.js"></script>
     <script src="./main/crystalBall/index.js" type="module"></script>
-    <audio src="../public/crstal/Susie Tallman - We Wish You a Merry Christmas.mp3" id="audios" autoplay preload loop="loop"></audio>
+    <audio src="../public/crstal/Susie Tallman - We Wish You a Merry Christmas.mp3" id="audios" autoplay preload
+        loop="loop"></audio>
     <!-- <script src="./main/earth.js" type="module"></script> -->
     <!-- <div class="cloudTop"></div>
     <div class="cloudDown"></div>
     <canvas id="Christmas"></canvas>
     <script src="./main/Christmas.js"></script> -->
 </body>
+
 </html>
